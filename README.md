@@ -34,7 +34,7 @@ echo "Hey! I am the appended line (not a heading) in readme file" >> README.md
 git init
 ```
 
-The git init command creates a new .git subdirectory in your project folder, setting up the necessary files and directories Git uses to track your project's history.
+The git init command creates a new .git subdirectory in your project folder, setting up the necessary files and directories Git uses to track your project's history. Next, check again with:
 
 ```bash
 ls -a
@@ -42,7 +42,33 @@ ls -a
 
 The output of above command should show ".git" now.
 
-### 4. Stage Changes
+### 4. Checking Your Current Branch Name (optional if name is already "*main*")
+
+Before renaming, it's prudent to verify the current branch name to avoid potential conflicts. You can do this by executing:
+
+```bash
+git branch
+```
+
+This command lists all local branches and highlights the current one with an asterisk (*). If the current branch is already named "*main*", there's no need to rename it (i.e., step 4.1 below can be skipped).
+
+#### 4.1 Rename the Current Branch to main (this is the optional step)
+
+The command below renames the default branch from "*master*" to "*main*". Executing this command immediately after initialization ensures that all subsequent commits are made on the "*main*" branch.
+
+```bash
+git branch -M main
+```
+
+**Note**: If your repository already contains commits on a branch named "*master*", and you wish to rename it to "*main*", you can do so with:
+
+```bash
+git branch -m master main
+```
+
+After renaming, ensure you update the default branch settings on your remote repository and inform collaborators to update their local repositories accordingly.
+
+### 5. Stage Changes
 
 The git add command adds changes in the working directory to the staging area.
 
@@ -54,7 +80,7 @@ git add .
 git add README.md
 ```
 
-### 5. Commit Changes
+### 6. Commit Changes
 
 After staging, commit the changes by executing:
 
@@ -64,11 +90,11 @@ git commit -m "first commit"
 
 The git commit command captures a snapshot of the project's currently staged changes. The -m flag allows you to add a commit message inline.
 
-### 6. Connecting to GitHub
+### 7. Connecting to GitHub
 
 To share your local repository on GitHub, you'll need to create a remote repository and link it to your local repo:
 
-#### Create a New Repository on GitHub
+#### 7.1 Create a New Repository on GitHub
 
 - Log in to your GitHub account.
 - Click on the "+" icon in the top-right corner and select "New repository."
@@ -77,7 +103,7 @@ To share your local repository on GitHub, you'll need to create a remote reposit
 - Click "Create repository."
 - Add the Remote Repository
 
-### 7. Add the Remote Repository
+### 8. Add the Remote Repository
 
 In VS Code's terminal, add the remote repository with the git remote add command.
 
@@ -88,13 +114,13 @@ The git remote add command creates a new connection to a remote repository. The 
 git remote add origin https://github.com/amaan-123/LocalRepo.git
 ```
 
-### 8. View Remote URLs
+### 9. View Remote URLs
 
 ```bash
 git remote -v # Displays the URLs of remote repositories.
 ```
 
-### 9. Push Changes to GitHub
+### 10. Push Changes to GitHub
 
 The git push command uploads your local commits to the remote repository:
 
@@ -116,4 +142,4 @@ So, a future push to the associated remote repo (with this repo set as current d
 git push
 ```
 
-### 10. Adios Amigo! 😎
+### 11. Adios Amigo! 😎
