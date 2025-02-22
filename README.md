@@ -32,6 +32,11 @@ echo "Hey! I am the appended line (not a heading) in readme file" >> README.md
 
 ```bash
 git init
+
+# optionally, with below command:
+# user can even ensure to set the name of the default branch to main:
+
+git init --initial-branch=main
 ```
 
 The git init command creates a new .git subdirectory in your project folder, setting up the necessary files and directories Git uses to track your project's history. Next, check again with:
