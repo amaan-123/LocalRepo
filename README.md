@@ -1,4 +1,4 @@
-# These are the steps to follow to push any locally created repo (say "LocalRepo") to GitHub using CLI
+# These are the steps to follow to push any locally created repo (say "LocalRepo") to GitHub using CLI for the first time.
 
 ## Steps Involved (VS Code  Terminal's Git Bash Shell/Profile was used)
 
